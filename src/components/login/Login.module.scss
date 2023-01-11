@@ -1,4 +1,4 @@
-.container{
+.container {
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 20%) 0 3px 3px -2px,
   rgb(0 0 0 / 14%) 0px 3px 4px 0px,
@@ -8,38 +8,39 @@
   padding: 40px;
   box-sizing: border-box;
 
-  .info{
+  .info {
     text-align: center;
 
 
   }
-  .formContainer{
+
+  .formContainer {
     display: flex;
     flex-direction: column;
 
-    .star{
-      color : red;
+    .star {
+      color: red;
       font-size: 18px;
     }
 
-    .input{
+    .input {
       border: 1px solid #d7d4d7;
       height: 40px;
       padding: 0 10px;
     }
 
-    .labelText{
+    .labelText {
       margin: 5px 0;
     }
 
-    .errorText{
+    .errorText {
       color: red;
       height: 21px;
     }
 
-    .button{
+    .button {
       background-color: #5867f4;
-      color : white;
+      color: white;
       align-self: self-start;
       padding: 10px 25px;
       outline: none;

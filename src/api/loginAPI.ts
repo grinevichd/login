@@ -13,23 +13,23 @@ export class Users {
         // для тестов делаю иметацию запроса на сервер
 
         return new Promise((resolve, reject) => {
-                if (payload.email === data.email && payload.password === data.password) {
-                    setTimeout(()=>{
-                        resolve({
-                                data: {
-                                    isLoggedIn: true
-                                }
+            if (payload.email === data.email && payload.password === data.password) {
+                setTimeout(() => {
+                    resolve({
+                            data: {
+                                isLoggedIn: true
                             }
-                        )
-                    },1000)
+                        }
+                    )
+                }, 1000)
 
-                }else{
-                    setTimeout(()=>{
-                        reject( 'неправельный логин или пароль')
-                    },1000)
+            } else {
+                setTimeout(() => {
+                    reject('неправельный логин или пароль')
+                }, 1000)
 
-                }
-            })
+            }
+        })
     }
 }
 

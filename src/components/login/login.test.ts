@@ -15,7 +15,7 @@ test('Write correct login and password', async () => {
 
     const result = {
         data: {
-            isLoggedIn : true
+            isLoggedIn: true
         }
     }
 
@@ -29,7 +29,7 @@ test('Write wrong login and password', async () => {
         password: "12345678523123"
     }
 
-    const result = {message : 'неправельный логин или пароль'}
+    const result = {message: 'неправельный логин или пароль'}
 
 
     mockedAxios.get.mockResolvedValue(result)

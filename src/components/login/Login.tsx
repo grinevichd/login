@@ -2,7 +2,7 @@ import React from 'react';
 import {useFormik} from 'formik';
 import style from './Login.module.scss'
 import {validation} from "./validation";
-import { Users } from '../../api/loginAPI';
+import {Users} from '../../api/loginAPI';
 
 export const Login = () => {
 
@@ -15,9 +15,10 @@ export const Login = () => {
         validationSchema: validation,
         onSubmit: values => {
             Users.login(values)
-                .catch((e)=>{
-                // ловлю оишбку чтобы не падала в консоль
-                console.log(e)})
+                .catch((e) => {
+                    // ловлю оишбку чтобы не падала в консоль
+                    console.log(e)
+                })
         },
     });
 
