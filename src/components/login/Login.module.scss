@@ -28,6 +28,10 @@
       border: 1px solid #d7d4d7;
       height: 40px;
       padding: 0 10px;
+      outline: none;
+    }
+    .inputError{
+      border: 1px solid red;
     }
 
     .labelText {
@@ -38,6 +42,7 @@
       color: red;
       height: 21px;
     }
+
 
     .button {
       background-color: #5867f4;

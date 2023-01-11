@@ -15,12 +15,20 @@ export const Login = () => {
         validationSchema: validation,
         onSubmit: values => {
             Users.login(values)
+                // чтобы было понятнее как завершился результат
+                .then(()=>{
+                    alert("Вы вошли в систему")
+                })
                 .catch((e) => {
                     // ловлю оишбку чтобы не падала в консоль
                     console.log(e)
                 })
         },
     });
+
+
+    const errorInputEmail = !!(formik.errors.email) ?  `${style.inputError} ${style.input}` : style.input
+    const errorInputPassword = !!(formik.errors.password) ?  `${style.inputError} ${style.input}` : style.input
 
     return (
         <div className={style.container}>
@@ -32,11 +40,9 @@ export const Login = () => {
                 <label htmlFor="email" className={style.labelText}>E-Mail : <span
                     className={style.star}>*</span></label>
                 <input
-                    className={style.input}
-                    name="email"
+                    className={errorInputEmail}
                     type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.email}
+                    {...formik.getFieldProps('email')}
                 />
                 {formik.touched.email && formik.errors.email ? (
                     <span className={style.errorText}>{formik.errors.email}</span>
@@ -45,11 +51,9 @@ export const Login = () => {
                 <label htmlFor="password" className={style.labelText}>Пароль : <span
                     className={style.star}>*</span></label>
                 <input
-                    className={style.input}
-                    name="password"
+                    className={errorInputPassword}
                     type="password"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
+                    {...formik.getFieldProps('password')}
 
                 />
                 {formik.touched.password && formik.errors.password ? (
