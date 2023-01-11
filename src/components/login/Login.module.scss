@@ -1,0 +1,54 @@
+.container{
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 20%) 0 3px 3px -2px,
+  rgb(0 0 0 / 14%) 0px 3px 4px 0px,
+  rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+  width: 500px;
+  height: 500px;
+  padding: 40px;
+  box-sizing: border-box;
+
+  .info{
+    text-align: center;
+
+
+  }
+  .formContainer{
+    display: flex;
+    flex-direction: column;
+
+    .star{
+      color : red;
+      font-size: 18px;
+    }
+
+    .input{
+      border: 1px solid #d7d4d7;
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    .labelText{
+      margin: 5px 0;
+    }
+
+    .errorText{
+      color: red;
+      height: 21px;
+    }
+
+    .button{
+      background-color: #5867f4;
+      color : white;
+      align-self: self-start;
+      padding: 10px 25px;
+      outline: none;
+      border: none;
+      margin-top: 50px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+
+
+}
